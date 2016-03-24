@@ -230,7 +230,9 @@ class NSP_GK5_com_content_View extends NSP_GK5_View {
 				$alt_text = $images->image_intro_caption;
 			}
 		}
-		
+		if ($alt_text == '') {
+		$alt_text = $item['title'];
+		}
 		return $alt_text;
 	}
 }
